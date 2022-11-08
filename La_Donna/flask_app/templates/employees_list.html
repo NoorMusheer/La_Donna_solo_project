@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename=('/css/style.css')) }}">
+
+    <title>Employees</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row header-row">
+            <div class ="col-6"><img src="./static/imgs/LaDonna_Header.png" alt="La Donna Logo" class="header-logo-img"></div>
+            <div class="col-4"></div>
+            <div class="col-2">Employees Only</div>
+        </div>
+
+        <div class="row navigation-row">
+            <div class="col-8"></div>
+            <div class="col-2"><h5><a href="/dashboard">Home</a></h5></div>
+            <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
+        </div>
+        <div class="row main-body-row">
+            <table class="table table-striped">
+                <div class="row">
+                    <div class="col-4"><h4>Employees</h4></div>
+                    <div class="col-8">
+                    <a href="/new_employee"><button class="btn btn-outline">Add A New Employee</button></a>
+                    </div>
+                </div>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Title</th>
+                        <th>E-Mail</th>
+                        <th>Phone</th>
+                        <th>Hire Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for employee in all_employees%}
+                    <tr>
+                        <td>{{employee.first_name}}</td>
+                        <td>{{employee.last_name}}</td>
+                        <td>{{employee.title}}</td>
+                        <td>{{employee.email}}</td>
+                        <td>{{employee.phone}}</td>
+                        <td>{{employee.hire_date}}</td>
+                        <td><a href="/ee_info_mngr/{{employee.id}}">View/Edit</a> |  Archive</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>

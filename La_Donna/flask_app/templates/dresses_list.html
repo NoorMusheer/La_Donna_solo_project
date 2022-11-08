@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename=('/css/style.css')) }}">
+
+    <title>Dresses</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row header-row">
+            <div class ="col-6"><img src="./static/imgs/LaDonna_Header.png" alt="La Donna Logo" class="header-logo-img"></div>
+            <div class="col-4"></div>
+            <div class="col-2">Employees Only</div>
+        </div>
+
+        <div class="row navigation-row">
+            <div class="col-8"></div>
+            <div class="col-2"><h5><a href="/dashboard">Home</a></h5></div>
+            <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
+        </div>
+        <div class="row main-body-row">
+            <table class="table table-striped tbl">
+                <div class="row">
+                    <div class="col-4"><h4>Dresses</h4></div>
+                    <div class="col-8">
+                    <a href="/new_dress"><button class="btn btn-outline">Add A New Dress</button></a>
+                    </div>
+                </div>
+
+                <thead>
+                    <tr>
+                        <th class="col-1">Name</th>
+                        <th class="col-1 col-style">Style</th>
+                        <th class="col-1">Color</th>
+                        <th class="col-1">Fabric</th>
+                        <th class="col-4">Notes</th>
+                        <th class="col-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for dress in active_dresses%}
+                    <tr>
+                        <td>{{dress.name}}</td>
+                        <td class="col-1 col-style">{{dress.style}}</td>
+                        <td>{{dress.color}}</td>
+                        <td>{{dress.fabric}}</td>
+                        <td>{{dress.other}}</td>
+                        <td><a href="/dress_edit/{{dress.id}}">View/Edit</a> |  
+                            <a href="/dress_archive/{{dress.id}}">Archive</a>
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        <div class="row row-spacer" style="height:500px"></div>
+            <table class="table table-striped">
+                <div class="row"><h4>Archived Dresses</h4>(will auto-delete after being archived for 12 months)</div>
+                <thead>
+                    <tr>
+                        <th class="col-1">Name</th>
+                        <th class="col-1 col-style">Style</th>
+                        <th class="col-1">Color</th>
+                        <th class="col-1">Fabric</th>
+                        <th class="col-4">Notes</th>
+                        <th class="col-1">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for archived in archived_dresses%}
+                    <tr>
+                        <td>{{archived.name}}</td>
+                        <td class="col-1 col-style">{{archived.style}}</td>
+                        <td>{{archived.color}}</td>
+                        <td>{{archived.fabric}}</td>
+                        <td>{{archived.notes}}</td>
+                        <td><a href="/dress_edit/{{archived.id}}">View</a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>

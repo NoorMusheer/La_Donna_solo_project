@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename=('/css/style.css')) }}">
+
+    <title>Brides</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row header-row">
+            <div class ="col-6"><img src="./static/imgs/LaDonna_Header.png" alt="La Donna Logo" class="header-logo-img"></div>
+            <div class="col-4"></div>
+            <div class="col-2">Employees Only</div>
+        </div>
+
+        <div class="row navigation-row">
+            <div class="col-8"></div>
+            <div class="col-2"><h5><a href="/dashboard">Home</a></h5></div>
+            <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
+        </div>
+        <div class="row main-body-row">
+            <table class="table table-striped">
+                <div class="row">
+                    <div class="col-4"><h4>Brides</h4></div>
+                    <div class="col-8">
+                    <a href="/new_bride"><button class="btn btn-outline">Add A New Bride</button></a>
+                    </div>
+                </div>
+
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>E-Mail</th>
+                        <th>Phone</th>
+                        <th>Wedding Date</th>
+                        <th>Notes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for bride in all_brides%}
+                    <tr>
+                        <td>{{bride.first_name}}</td>
+                        <td>{{bride.last_name}}</td>
+                        <td>{{bride.email}}</td>
+                        <td>{{bride.phone}}</td>
+                        <td>{{bride.wedding_date}}</td>
+                        <td>{{bride.other}}</td>
+                        <td><a href="/bride_edit/{{bride.id}}">View/Edit Details</a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>

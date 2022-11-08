@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename=('/css/style.css')) }}">
+
+    <title>Edit Orders</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row header-row">
+            <div class ="col-6"><img src="/static/imgs/LaDonna_Header.png" alt="La Donna Logo" class="header-logo-img"></div>
+            <div class="col-4"></div>
+            <div class="col-2">Employees Only</div>
+        </div>
+        <div class="row navigation-row">
+            <div class="col-8"></div>
+            <div class="col-2"><h5><a href="/dashboard">Home</a></h5></div>
+            <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
+        </div>
+        <div class="row main-body-row">
+            <form action="/order_update/{{order.id}}" method="POST">
+                <div class="container measurement-container">
+                    <input type="hidden" name="m_id" value="{{bride_m.id}}">
+                    <h5>Customer Info</h5>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Bride:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="bride_id" value="{{order.bride_id}}">
+                        </div>
+                    </div>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Dress:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="dress_id" value="{{order.dress_id}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="container measurement-container">
+                    <h5>Measurements</h5>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Height:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="m_height" value=" {{bride_m.height}}">
+                        </div>
+                    </div>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Waist:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="m_waist" value="{{bride_m.waist}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="container measurement-container">
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Order Notes:</label>
+                        <div class="col-sm-10">
+                        <textarea class="form-control" name="notes" id="to_do_notes" rows="6" cols="80">{{order.notes}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="container measurement-container">
+                    <div class="form-group row">
+                        <input type="submit" value="Update" class="btn btn-outline">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

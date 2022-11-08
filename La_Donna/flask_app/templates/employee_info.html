@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename=('/css/style.css')) }}">
+
+    <title>My Account Info</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row header-row">
+            <div class ="col-6"><img src="/static/imgs/LaDonna_Header.png" alt="La Donna Logo" class="header-logo-img"></div>
+            <div class="col-4"></div>
+            <div class="col-2">Employees Only</div>
+        </div>
+        <div class="row navigation-row">
+            <div class="col-8"></div>
+            <div class="col-2"><h5><a href="/dashboard">Home</a></h5></div>
+            <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
+        </div>
+        <div class="row ee-perm-data-row">
+            <div class="container measurement-container">
+                <div class="form-input form-group row">
+                    <label class="col-sm-2 col-form-label">First Name:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="fname" value="{{my_info.first_name}}" disabled>
+                    </div>
+                </div>
+                <div class="form-input form-group row">
+                    <label class="col-sm-2 col-form-label">Last Name:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="lname" value="{{my_info.last_name}}" disabled>
+                    </div>
+                </div>
+
+                <div class="form-input form-group row">
+                    <label class="col-sm-2 col-form-label">Title:</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="title" value="{{my_info.title}} - disabled" disabled>
+                    </div>
+                </div>
+                <div class="form-input form-group row">
+                    <label class="col-sm-2 col-form-label">Hire Date:</label>
+                    <div class="col-sm-10">
+                    <input type="date" class="form-control" name="hire_date" value="{{my_info.hire_date}}" disabled>
+                    </div>
+                </div>
+                <div class="form-input form-group row">
+                    <label class="col-sm-2 col-form-label">DOB:</label>
+                    <div class="col-sm-10">
+                    <input type="date" class="form-control" name="ee_DOB" value="{DOB (must add as attribute)}" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row main-body-row">
+            <form action="/employee_update/{{my_info.id}}" method="POST">
+                <div class="container measurement-container">
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">E-mail:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="email" value="{{my_info.email}}">
+                        </div>
+                    </div>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Phone:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="phone" value="{{my_info.phone}}">
+                        </div>
+                    </div>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Street Address:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="addr_street" value="{{my_info.addr_street}}">
+                        </div>
+                    </div>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">City:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="addr_city" value="{{my_info.addr_city}}">
+                        </div>
+                    </div>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">State:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="addr_state" value="{{my_info.addr_state}}">
+                        </div>
+                    </div>
+                    <div class="form-input form-group row">
+                        <label class="col-sm-2 col-form-label">Zip:</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="addr_zip" value="{{my_info.addr_zip}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="container measurement-container">
+                    <div class="form-group row">
+                        <input type="submit" value="Update My Info" class="btn btn-outline">
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>

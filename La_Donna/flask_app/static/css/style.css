@@ -1,0 +1,52 @@
+*{
+    margin:0 auto;
+}
+
+.container{
+    margin-top:3%;
+}
+.header-logo-img{
+    width:50%;
+}
+.measurement-container{
+    padding-bottom:15px;
+    width:50%;
+}
+
+.header-row{
+    border:1px #AE924F solid;
+    box-shadow: 3px 3px 10px #AE924F;
+    padding:1%;
+}
+
+a{
+    text-decoration: none;
+    color: #AE924F;
+}
+
+.btn-outline, .form-control{
+    border-color:#AE924F;
+    box-shadow: 2px 2px 2px #AE924F;
+}   
+
+
+.order-number-col{
+    width:5%;
+}
+.notes-col{
+    width:50%;
+}
+
+.btn{
+    width:25%;
+    margin-top: 3%;
+}
+.col-style{
+    font-style: italic;
+}
+
+.crossout{
+    text-decoration: line-through;
+}
+
+
