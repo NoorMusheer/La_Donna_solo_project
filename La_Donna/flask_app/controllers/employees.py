@@ -57,7 +57,7 @@ def login_page_after_register():
 @app.route('/dashboard')
 def user_dashborad():
     if session:
-        return render_template('dashboard.html')
+        return render_template('dashboard_new_test.html')
     else:
         return redirect('/')
 
