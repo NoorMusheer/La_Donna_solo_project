@@ -22,7 +22,7 @@ def update_to_archived(id):
 
 @app.route('/new_order')
 def new_order():
-    return render_template('order_add.html')
+    return render_template('order_add_test.html')
 
 @app.route('/order_add', methods=["POST"])
 def add_order_to_db():

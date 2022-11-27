@@ -20,7 +20,6 @@
             <div class="col-4"></div>
             <div class="col-2">Employees Only</div>
         </div>
-        <div id="header"></div>
 
         <div class="main-body-row row">
             <div class="row">
@@ -31,82 +30,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-6"><a href="/new_order"><button class="btn btn-outline">New Order</button></a></div>
-            <div class="col-6"><a href="/orders"><button class="btn btn-outline">List of Orders</button></a></div>
+            <div class="col-6"><a href="/new_order"><button class="btn btn-outline w-100">New Order</button></a></div>
+            <div class="col-6"><a href="/orders"><button class="btn btn-outline w-100">List of Orders</button></a></div>
         </div>
-        <!-- --- START OF CARDS --- -->
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <a href="/orders">
-                    <div class="card">
-                        <img src="../static/imgs/order_form.jpg" class="card-img-top" alt="stock order form">
-                        <div class="card-body">
-                            <h5 class="card-title">Orders</h5>
-                            <p class="card-text">Start a new order or review all the orders saved. This includes orders of all activity status. </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="/brides">
-                    <div class="card">
-                        <img src="../static/imgs/bride.jpg" class="card-img-top" alt="stock bride image" style="width:70%">
-                        <div class="card-body">
-                            <h5 class="card-title">Brides</h5>
-                            <p class="card-text">Add a new bride to the client list or review who is already included. Contact information and status is available.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="/dresses">
-                    <div class="card">
-                        <img src="../static/imgs/LaViola.jpg" class="card-img-top" alt="stock dress image">
-                        <div class="card-body">
-                            <h5 class="card-title">Dresses</h5>
-                            <p class="card-text">ok,i'm getting tired. pretty much same as the other two. add, edit or delete dress info. </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="/task_list">
-                    <div class="card">
-                        <img src="../static/imgs/to_do_list.png" class="card-img-top" alt="stock to do image">
-                        <div class="card-body">
-                            <h5 class="card-title">To Do</h5>
-                            <p class="card-text">so, here you can check the list set for yourself. add, edit or cross off. :-)</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="/my_account">
-                    <div class="card">
-                        <img src="../static/imgs/my_account_icon.png" class="card-img-top" alt="stock employees logo">
-                        <div class="card-body">
-                            <h5 class="card-title">My Account</h5>
-                            <p class="card-text">Enter time  |  Submit project card  |  View and change your personal info. </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {% if session.permission == 5 %}
-            <div class="col">
-                <a href="/employees">
-                    <div class="card">
-                        <img src="../static/imgs/employees.jpg" class="card-img-top" alt="stock employees logo">
-                        <div class="card-body">
-                            <h5 class="card-title">Employees</h5>
-                            <p class="card-text">This allows you to add or edit employees from the database. no deletion, but we can mark them as inactive if they are no longer with the company. </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            {% endif %}
-
-
+        <div class="row">
+            <div class="col-6"><a href=""><button class="btn btn-outline w-100">New Client</button></a></div>
+            <div class="col-6"><a href=""><button class="btn btn-outline w-100">List of Clients</button></a></div>
         </div>
+        <div class="row">
+            <div class="col-6"><a href=""><button class="btn btn-outline w-100">New Dress</button></a></div>
+            <div class="col-6"><a href=""><button class="btn btn-outline w-100">List of Dresses</button></a></div>
+        </div>
+
     </div>
 
 </body>

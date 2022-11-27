@@ -49,4 +49,16 @@ a{
     text-decoration: line-through;
 }
 
+.order_form_row{
+    margin-top:1%;
+}
+
+.o_form_col{
+    text-align:center;
+}
+
+.o_form_input{
+    width:100%;
+}
+
 

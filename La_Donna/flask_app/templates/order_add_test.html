@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename=('/css/style.css')) }}">
+
+    <title>Add New Order</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row header-row">
+            <div class ="col-6"><img src="./static/imgs/LaDonna_Header.png" alt="La Donna Logo" class="header-logo-img"></div>
+            <div class="col-4"></div>
+            <div class="col-2">Employees Only</div>
+        </div>
+        <div class="row navigation-row">
+            <div class="col-8"></div>
+            <div class="col-2"><h5><a href="/dashboard">Home</a></h5></div>
+            <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
+        </div>
+        <!--FORM START-->
+    <form action="" id="order_form">
+        <div class="row order_form_row">
+            <div class="o_form_col col-3">
+                <input type="checkbox" id="chkbx_initial">
+                <label for="chkbx_initial">Initial</label>
+            </div>
+            <div class="o_form_col col-3">
+                <input type="checkbox" id="chkbx_mockup">
+                <label for="chkbx_mockup">Mock-Up</label>
+            </div>
+            <div class="o_form_col col-3">
+                <input type="checkbox" id="chkbx_re_measure">
+                <label for="chkbx_re_measure">Re-Measure</label>
+            </div>
+            <div class="o_form_col col-3">
+                <input type="checkbox" id="chkbx_fitting">
+                <label for="chkbx_fitting">Fitting</label>
+            </div>
+        </div> <!--Checkbox Row Ends-->
+        <div class="row order_form_row">
+            <div class="col-6">
+                <label for="client_name_order_form">Name: </label>
+                <input type="text" id="client_name_order_form" class="o_form_input">
+            </div>
+            <div class="col-4">
+                <label for="date_order_form">Date: </label>
+                <input type="date" id="date_order_form" class="o_form_input">
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row order_form_row">
+            <div class="col-6">
+                <label for="dress_order_form">Dress: </label>
+                <input type="text" id="dress_order_form" class="o_form_input">
+            </div>
+            <div class="col-4">
+                <label for="event_date_order_form">Event Date: </label>
+                <input type="text" id="event_date_order_form" class="o_form_input">
+            </div>
+            <div class="col-2">
+                <label for="chkbx_rush_order" style="width:100%; text-align: center;">Rush Order</label>
+                <input type="checkbox" id="chkbx_rush_order" class="o_form_input">
+            </div>
+        </div>
+        <div class="row order_form_row">
+            <div class="col-6">
+                <label for="colour_o_form">Colour: </label>
+                <input type="text" id="colour_o_form" class="o_form_input">
+            </div>
+            <div class="col-6">
+                <label for="silhouette_o_form">Silhouette: </label>
+                <input type="text" id="silhouette_o_form" class="o_form_input">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label for="">Fabric: </label>
+                <input type="text" id="" class="o_form_input">
+            </div>
+            <div class="col-6">
+                <label for="closure_o_form" class="o_form_input">Closure: </label>
+                <input type="button" value="zipper" style="width:30%;">
+                <input type="button" value="corset" style="width:30%;">
+                <input type="button" value="button_loops" style="width:30%;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label for="" class="o_form_input">Beadwork: </label>
+                <input type="button" value="Add">
+                <input type="button" value="Remove">
+            </div>
+            <div class="col-6">
+                <label for="" class="o_form_input">Lace: </label>
+                <input type="button" value="Add">
+                <input type="button" value="Remove"> 
+            </div>
+        </div>
+
+
+    </form>
+    </div>
+</body>
+</html>
