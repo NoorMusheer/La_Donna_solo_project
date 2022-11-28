@@ -21,88 +21,305 @@
             <div class="col-2"><h5><a href="/dashboard">Home</a></h5></div>
             <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
         </div>
-        <!--FORM START-->
-    <form action="" id="order_form">
-        <div class="row order_form_row">
-            <div class="o_form_col col-3">
-                <input type="checkbox" id="chkbx_initial">
-                <label for="chkbx_initial">Initial</label>
-            </div>
-            <div class="o_form_col col-3">
-                <input type="checkbox" id="chkbx_mockup">
-                <label for="chkbx_mockup">Mock-Up</label>
-            </div>
-            <div class="o_form_col col-3">
-                <input type="checkbox" id="chkbx_re_measure">
-                <label for="chkbx_re_measure">Re-Measure</label>
-            </div>
-            <div class="o_form_col col-3">
-                <input type="checkbox" id="chkbx_fitting">
-                <label for="chkbx_fitting">Fitting</label>
-            </div>
-        </div> <!--Checkbox Row Ends-->
-        <div class="row order_form_row">
-            <div class="col-6">
-                <label for="client_name_order_form">Name: </label>
-                <input type="text" id="client_name_order_form" class="o_form_input">
-            </div>
-            <div class="col-4">
-                <label for="date_order_form">Date: </label>
-                <input type="date" id="date_order_form" class="o_form_input">
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row order_form_row">
-            <div class="col-6">
-                <label for="dress_order_form">Dress: </label>
-                <input type="text" id="dress_order_form" class="o_form_input">
-            </div>
-            <div class="col-4">
-                <label for="event_date_order_form">Event Date: </label>
-                <input type="text" id="event_date_order_form" class="o_form_input">
-            </div>
-            <div class="col-2">
-                <label for="chkbx_rush_order" style="width:100%; text-align: center;">Rush Order</label>
-                <input type="checkbox" id="chkbx_rush_order" class="o_form_input">
-            </div>
-        </div>
-        <div class="row order_form_row">
-            <div class="col-6">
-                <label for="colour_o_form">Colour: </label>
-                <input type="text" id="colour_o_form" class="o_form_input">
-            </div>
-            <div class="col-6">
-                <label for="silhouette_o_form">Silhouette: </label>
-                <input type="text" id="silhouette_o_form" class="o_form_input">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <label for="">Fabric: </label>
-                <input type="text" id="" class="o_form_input">
-            </div>
-            <div class="col-6">
-                <label for="closure_o_form" class="o_form_input">Closure: </label>
-                <input type="button" value="zipper" style="width:30%;">
-                <input type="button" value="corset" style="width:30%;">
-                <input type="button" value="button_loops" style="width:30%;">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <label for="" class="o_form_input">Beadwork: </label>
-                <input type="button" value="Add">
-                <input type="button" value="Remove">
-            </div>
-            <div class="col-6">
-                <label for="" class="o_form_input">Lace: </label>
-                <input type="button" value="Add">
-                <input type="button" value="Remove"> 
-            </div>
-        </div>
-
-
-    </form>
+        <div class="container">
+            <div class="row main-body-row">
+                <div class="col-4"><img src="/static/imgs/design_template.png" alt="Design Template" style="width:100%; height:auto;"></div> <!-- START & END COLUMN 1 for Main Body Row-->
+                <div class="col-8">
+                    <form action="" id="order_form">
+                        <div class="row order_form_row">
+                            <div class="o_form_col col-3">
+                                <input type="checkbox" id="chkbx_initial">
+                                <label for="chkbx_initial">Initial</label>
+                            </div>
+                            <div class="o_form_col col-3">
+                                <input type="checkbox" id="chkbx_mockup">
+                                <label for="chkbx_mockup">Mock-Up</label>
+                            </div>
+                            <div class="o_form_col col-3">
+                                <input type="checkbox" id="chkbx_re_measure">
+                                <label for="chkbx_re_measure">Re-Measure</label>
+                            </div>
+                            <div class="o_form_col col-3">
+                                <input type="checkbox" id="chkbx_fitting">
+                                <label for="chkbx_fitting">Fitting</label>
+                            </div>
+                        </div> <!--Checkbox Row Ends-->
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="client_name_order_form">Name: </label>
+                                <input type="text" id="client_name_order_form" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="date_order_form">Date: </label>
+                                <input type="date" id="date_order_form" class="o_form_input form-control">
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="dress_order_form">Dress: </label>
+                                <input type="text" id="dress_order_form" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="event_date_order_form">Event Date: </label>
+                                <input type="text" id="event_date_order_form" class="o_form_input form-control">
+                            </div>
+                            <div class="col-2">
+                                <label for="chkbx_rush_order" style="width:100%; text-align: center;">Rush Order</label>
+                                <input type="checkbox" id="chkbx_rush_order" class="o_form_input">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="colour_o_form">Colour: </label>
+                                <input type="text" id="colour_o_form" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="silhouette_o_form">Silhouette: </label>
+                                <input type="text" id="silhouette_o_form" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="">Fabric: </label>
+                                <input type="text" id="" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Closure: </label>
+                                <div class="radio">
+                                    <input class="radio__input" type="radio" value="zipper" name="closure" id="closure1">
+                                    <label class="radio__label " for="closure1">Zipper</label>
+                                    <input class="radio__input" type="radio" value="corset" name="closure" id="closure2">
+                                    <label class="radio__label" for="closure2">Corset</label>
+                                    <input class="radio__input" type="radio" value="button_loops" name="closure" id="closure3">
+                                    <label class="radio__label" for="closure3">Button Loops</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input ">Beadwork: </label>
+                                <div class="radio">
+                                    <input class="radio__input" type="radio" value="add" name="beadwork" id="beadwork_add">
+                                    <label class="radio__label " for="beadwork_add">ADD</label>
+                                    <input class="radio__input" type="radio" value="remove" name="beadwork" id="beadwork_remove">
+                                    <label class="radio__label" for="beadwork_remove">REMOVE</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input ">Lace: </label>
+                                <div class="radio">
+                                    <input class="radio__input" type="radio" value="add" name="lace" id="lace_add">
+                                    <label class="radio__label " for="beadwork_add">ADD</label>
+                                    <input class="radio__input" type="radio" value="remove" name="lace" id="lace_remove">
+                                    <label class="radio__label" for="beadwork_remove">REMOVE</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col">
+                                <label for="">Lace / Bead Notes:</label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col">
+                                <label for="" class="o_form_input">Straps:</label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Bust Padding: </label>
+                                <div class="radio">
+                                    <input class="radio__input" type="radio" value="demi" name="bust_padding" id="bust_padding_demi">
+                                    <label class="radio__label " for="bust_padding_demi">Demi</label>
+                                    <input class="radio__input" type="radio" value="demi" name="bust_padding" id="bust_padding_push-up">
+                                    <label class="radio__label" for="bust_padding_push-up">Push-Up</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Boning</label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input ">Back Shoulder Width: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">One Shoulder: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Bust: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Waist: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Hip: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Underbust: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">BP to BP: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Chest: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Shoulder To Waist, Front: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Back: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Waist to Floor Front: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Back: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Hollow To Floor: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Hollow to Neckline: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Armhole: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Bicep: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Circumference: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Sleeve Length: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Elbow: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Wrist: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Train Length: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Train Design: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Overskirt Length: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Overskirt Design:</label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-6">
+                                <label for="" class="o_form_input">Overskirt Style: </label>
+                                <input type="button"  value="Princess Seam "> / 
+                                <input type="button" value="Back Seam"> / 
+                                <input type="button" value="Side Seam">
+                            </div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col-4">
+                                <label for="" class="o_form_input">Shoe Height: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                            <div class="col-4">
+                                <input type="button" value="Actual"> / 
+                                <input type="button" value="Approximate">
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                        <div class="row order_form_row">
+                            <div class="col">
+                                <label for="" class="o_form_input">Dress Notes: </label>
+                                <input type="text" class="o_form_input form-control">
+                            </div>
+                        </div>
+                        <div class="container veil-box"> <!--VEIL BOX STARTS-->
+                            <div class="row">
+                                <h4>VEIL</h4>
+                            </div>
+                            <div class="row order_form_row">
+                                <div class="col-4">
+                                    <input type="button" value="Atelier"> / 
+                                    <input type="button" value="Custom">
+                                </div>
+                                <div class="col-4">
+                                    <input type="button" value="Single-Layer"> / 
+                                    <input type="button" value="Blusher">
+                                </div>
+                            </div>
+                            <div class="row order_form_row">
+                                <div class="col-4">
+                                    <label for="" class="o_form_input">Number: </label>
+                                    <input type="text" class="o_form_input form-control">
+                                </div>
+                                <div class="col-4">
+                                    <label for="" class="o_form_input">Length: </label>
+                                    <input type="text" class="o_form_input form-control">
+                                </div>
+                            </div>
+                            <div class="row order_form_row">
+                                <div class="col">
+                                    <label for="" class="o_form_input">Notes: </label>
+                                    <input type="text" class="o_form_input form-control">
+                                </div>
+                            </div>
+                        </div><!-- VEIL BOX ENDS-->
+                    </form>
+                </div> <!-- END COLUMN 2 HOLDING FORM in Main Body Row-->
+            </div> <!--END MAIN BODY ROW-->
+        </div> <!-- END MAIN BODY CONTAINER-->
+        <br><br>
     </div>
 </body>
 </html>

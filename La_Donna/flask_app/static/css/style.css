@@ -5,7 +5,7 @@
 .container{
     margin-top:3%;
 }
-.header-logo-img{
+.header-logo-img, .notes-col{
     width:50%;
 }
 .measurement-container{
@@ -24,7 +24,7 @@ a{
     color: #AE924F;
 }
 
-.btn-outline, .form-control{
+.btn-outline, .form-control, .radio{
     border-color:#AE924F;
     box-shadow: 2px 2px 2px #AE924F;
 }   
@@ -32,9 +32,6 @@ a{
 
 .order-number-col{
     width:5%;
-}
-.notes-col{
-    width:50%;
 }
 
 .btn{
@@ -50,7 +47,7 @@ a{
 }
 
 .order_form_row{
-    margin-top:1%;
+    margin:0.5% auto;
 }
 
 .o_form_col{
@@ -61,4 +58,32 @@ a{
     width:100%;
 }
 
+.veil-box{
+    border: 1px solid black;
+}
+
+.radio{
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+
+.radio__input{
+    display: none;
+}
+
+.radio__label{
+    padding:8px 24px;
+    font-family: sans-serif;
+}
+
+.radio__label:not(:last-of-type){
+    border-right:3px solid #AE924F;
+}
+
+.radio__input:checked + .radio__label{
+    background-color: #AE924F;
+    color: white;
+}
 
