@@ -278,8 +278,13 @@
                                 <input type="text" class="o_form_input form-control">
                             </div>
                             <div class="col-4">
-                                <input type="button" value="Actual"> / 
-                                <input type="button" value="Approximate">
+                                <label for="shoe_height" class="o_form_input"></label>
+                                <div class="radio">
+                                    <input class="radio__input" type="radio" value="Actual" name="shoe_height" id="shoe_height_actual">
+                                    <label class="radio__label " for="overskirt_ps">Actual</label>
+                                    <input class="radio__input" type="radio" value="approximate" name="shoe_height" id="overskirt_bs">
+                                    <label class="radio__label" for="shoe_height_approx">Approximate</label>
+                                </div>
                             </div>
                             <div class="col-4"></div>
                         </div>
@@ -295,12 +300,20 @@
                             </div>
                             <div class="row order_form_row">
                                 <div class="col-4">
-                                    <input type="button" value="Atelier"> / 
-                                    <input type="button" value="Custom">
+                                    <div class="radio">
+                                        <input class="radio__input" type="radio" value="atelier" name="veil_type" id="veil_type_atelier">
+                                        <label class="radio__label " for="veil_type_atelier">Atelier</label>
+                                        <input class="radio__input" type="radio" value="custom" name="veil_type" id="veil_type_custom">
+                                        <label class="radio__label" for="veil_type_custom">Custom</label>
+                                    </div>
                                 </div>
                                 <div class="col-4">
-                                    <input type="button" value="Single-Layer"> / 
-                                    <input type="button" value="Blusher">
+                                    <div class="radio">
+                                        <input class="radio__input" type="radio" value="single_layer" name="veil_style" id="veil_style_single">
+                                        <label class="radio__label" for="veil_style_single">Single-Layer</label>
+                                        <input class="radio__input" type="radio" value="blusher" name="veil_style" id="veil_style_blusher">
+                                        <label class="radio__label" for="veil_style_blusher">Blusher</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row order_form_row">
