@@ -15,6 +15,10 @@ def orders_page():
     archived_orders = order.Order.orders_by_status(archived)
     return render_template('orders_list.html', active_orders = active_orders, archived_orders = archived_orders)
 
+@app.route('/see_order_add_test2')
+def start_order_test_page():
+    return render_template('order_add_test2.html')
+
 @app.route('/archive_order/<int:id>')
 def update_to_archived(id):
     order.Order.update_status_to_archive(id)

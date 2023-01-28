@@ -25,6 +25,11 @@ class Bride:
         return connectToMySQL(cls.DB).query_db(query, data)
 
     @classmethod
+    def add_a_bride_basic(cls, data):
+        query = "INSERT INTO brides (first_name, last_name, created_at, updated_at) VALUES (%(bride_first_name)s, %(bride_last_name)s, NOW(), NOW() );"
+        return connectToMySQL(cls.DB).query_db(query, data)
+        
+    @classmethod
     def get_bride_by_id(cls, id):
         data={
             "id":id

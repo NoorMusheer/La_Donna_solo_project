@@ -11,6 +11,15 @@ def index():
 def new_bride():
     return render_template("bride_add.html")
 
+@app.route('/bride_add_name_only', methods = ['POST'])
+def add_bride_to_db_name_only():
+    data={
+        "bride_first_name": request.form['bride_first_name'],
+        "bride_last_name":request.form['bride_last_name']
+    }
+    bride.Bride.add_a_bride_basic(data)
+    return redirect ('/brides')
+
 @app.route('/bride_add', methods=['POST'])
 def add_bride_to_db():
     data={
