@@ -17,8 +17,14 @@ def add_bride_to_db_name_only():
         "bride_first_name": request.form['bride_first_name'],
         "bride_last_name":request.form['bride_last_name']
     }
+    session['bride_first_name'] = request.form['bride_first_name']
+    session['bride_last_name'] = request.form['bride_last_name']
     bride.Bride.add_a_bride_basic(data)
-    return redirect ('/brides')
+    return redirect ('/choose_next')
+
+@app.route('/choose_next')
+def choose_next_step ():
+    return render_template("test_pages/choose.html")
 
 @app.route('/bride_add', methods=['POST'])
 def add_bride_to_db():

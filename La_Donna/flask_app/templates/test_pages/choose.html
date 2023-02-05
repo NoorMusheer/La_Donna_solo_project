@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename=('/css/style.css')) }}">
+        
+        <title>Choose Path</title>
+    </head>
+
+    <body>
+    <div class="container">
+        <div><h3>Thank You, {{session.bride_first_name}} {{session.bride_last_name}} is now saved.</h3></div> 
+
+        <div><h4>What would you like to do next? </h4></div>
+
+        <div> <a href="/test_pages/get_signature.html">Signature page</a> </div>
+        <div><a href="/measurements_page">Measurements</a> </div>
+
+    </div>
+
+</body>
+</html>
