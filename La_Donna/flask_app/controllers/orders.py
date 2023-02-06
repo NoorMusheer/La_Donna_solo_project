@@ -19,6 +19,10 @@ def orders_page():
 def start_order_test_page():
     return render_template('test_pages/order_add_test.html')
 
+@app.route('/style_appt_page')
+def start_style_appt():
+    return render_template('test_pages/style_appointment.html')
+
 @app.route('/archive_order/<int:id>')
 def update_to_archived(id):
     order.Order.update_status_to_archive(id)
