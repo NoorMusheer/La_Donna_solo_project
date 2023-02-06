@@ -87,3 +87,18 @@ a{
     color: white;
 }
 
+.fees_chkbx{
+    text-align:left;
+    height: 40px;
+}
+
+.lrg_chkbx{
+    width: 20px;
+    height: 20px;
+}
+
+.styl_appt_div_hdr{
+    background-color: #b9a26c;
+    color: white;
+    border-radius: 5px;
+}
