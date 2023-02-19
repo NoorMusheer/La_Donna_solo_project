@@ -34,20 +34,25 @@ def new_order():
 
 @app.route('/order_add', methods=["POST"])
 def add_order_to_db():
-    data={
+    o_type_data={
         "employee_id":session['id'],
-        "dress_id":request.form['dress_id'],
-        "bride_id":request.form['bride_id'],
-        "notes":request.form['notes'],
-        "status":"active"
+        "order_type":request.form['o_type'],
     }
-    m_data = {
-        "bride_id":request.form['bride_id'],
-        "height":request.form['m_height'],
-        "waist":request.form['m_waist'],
-    }
-    measurement.Measurement.add_measurement(m_data)
-    order.Order.add_order_to_db(data)
+    print ("*****O TYPE DATA ******", o_type_data)
+    # data={
+    #     "employee_id":session['id'],
+    #     "dress_id":request.form['dress_id'],
+    #     "bride_id":request.form['bride_id'],
+    #     "notes":request.form['notes'],
+    #     "status":"active"
+    # }
+    # m_data = {
+    #     "bride_id":request.form['bride_id'],
+    #     "height":request.form['m_height'],
+    #     "waist":request.form['m_waist'],
+    # }
+    # measurement.Measurement.add_measurement(m_data)
+    # order.Order.add_order_to_db(data)
     return redirect('/orders')
 
 @app.route('/orders_edit/<int:id>')

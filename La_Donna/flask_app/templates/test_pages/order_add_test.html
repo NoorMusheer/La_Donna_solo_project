@@ -25,25 +25,29 @@
             <div class="row main-body-row">
                 <div class="col-4"><img src="/static/imgs/design_template.png" alt="Design Template" style="width:100%; height:auto;"></div> <!-- START & END COLUMN 1 for Main Body Row-->
                 <div class="col-8">
-                    <form action="" id="order_form">
+                    <form action="/order_add" id="order_form" method="POST">
                         <div class="row order_form_row">
                             <div class="o_form_col col-3">
-                                <input type="checkbox" id="chkbx_initial">
-                                <label for="chkbx_initial">Initial</label>
+                                <input class="radio__input2" type="radio" value="order_form" name="o_type" id="order_form">
+                                <label class="radio__label " for="order_form">Initial</label>
+                        </div>
+                            <div class="o_form_col col-3">
+                                <input class="radio__input2" type="radio" value="mockup_form" name="o_type" id="mockup_form">
+                                <label class="radio__label " for="mockup_form">Mockup</label>
                             </div>
                             <div class="o_form_col col-3">
-                                <input type="checkbox" id="chkbx_mockup">
-                                <label for="chkbx_mockup">Mock-Up</label>
+                                <input class="radio__input2" type="radio" value="re-measure_form" name="o_type" id="re-measure_form">
+                                <label class="radio__label " for="re-measure_form">Re-Measure</label>
                             </div>
                             <div class="o_form_col col-3">
-                                <input type="checkbox" id="chkbx_re_measure">
-                                <label for="chkbx_re_measure">Re-Measure</label>
-                            </div>
-                            <div class="o_form_col col-3">
-                                <input type="checkbox" id="chkbx_fitting">
-                                <label for="chkbx_fitting">Fitting</label>
+                                <input class="radio__input2" type="radio" value="fiting_form" name="o_type" id="fitting_form">
+                                <label class="radio__label " for="fitting_form">Fitting</label>
                             </div>
                         </div> <!--Checkbox Row Ends-->
+                        <input type="submit" value="Start Order" class="btn btn-outline">
+
+                    </form>
+                        <!-- **** ENDING FORM HERE FOR CHECKBOX TESTING PURPOSES ****  -->
                         <div class="row order_form_row">
                             <div class="col-6">
                                 <label for="client_name_order_form">Name: </label>
@@ -92,7 +96,10 @@
                                     <input class="radio__input" type="radio" value="corset" name="closure" id="closure2">
                                     <label class="radio__label" for="closure2">Corset</label>
                                     <input class="radio__input" type="radio" value="button_loops" name="closure" id="closure3">
-                                    <label class="radio__label" for="closure3">Button Loops</label>
+                                    <label class="radio__label" for="closure3">Bttn Loops</label>
+                                    <input class="radio__input" type="radio" value="none" name="closure" id="closure4">
+                                    <label class="radio__label" for="closure4">None</label>
+
                                 </div>
                             </div>
                         </div>
@@ -100,19 +107,19 @@
                             <div class="col-6">
                                 <label for="" class="o_form_input ">Beadwork: </label>
                                 <div class="radio">
-                                    <input class="radio__input" type="radio" value="add" name="beadwork" id="beadwork_add">
+                                    <input class="radio__input" type="radio" value="add_beadwork" name="beadwork" id="beadwork_add">
                                     <label class="radio__label " for="beadwork_add">ADD</label>
-                                    <input class="radio__input" type="radio" value="remove" name="beadwork" id="beadwork_remove">
+                                    <input class="radio__input" type="radio" value="remove_beadwork" name="beadwork" id="beadwork_remove">
                                     <label class="radio__label" for="beadwork_remove">REMOVE</label>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <label for="" class="o_form_input ">Lace: </label>
                                 <div class="radio">
-                                    <input class="radio__input" type="radio" value="add" name="lace" id="lace_add">
-                                    <label class="radio__label " for="beadwork_add">ADD</label>
-                                    <input class="radio__input" type="radio" value="remove" name="lace" id="lace_remove">
-                                    <label class="radio__label" for="beadwork_remove">REMOVE</label>
+                                    <input class="radio__input" type="radio" value="add_lace" name="lace" id="lace_add">
+                                    <label class="radio__label " for="lace_add">ADD</label>
+                                    <input class="radio__input" type="radio" value="remove_lace" name="lace" id="lace_remove">
+                                    <label class="radio__label" for="lace_remove">REMOVE</label>
                                 </div>
                             </div>
                         </div>
