@@ -29,3 +29,5 @@ SELECT orders.id, brides.first_name AS brfname, brides.last_name AS brlname, nam
             WHERE orders.status = "archived";
             
 DELETE FROM employees WHERE id = 2;
+
+SELECT * FROM brides;
