@@ -8,30 +8,53 @@ import smtplib
 
 mail = Mail(app)
 
+# @app.route('/')
+# def main_page():
+#     return render_template('login.html')
+
 @app.route('/')
 def main_page():
-    return render_template('login.html')
+    return render_template('/test_pages/login_pin.html')
 
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect('/')
 
+# @app.route('/check_login', methods=["POST"])
+# def validate_login_info():
+#     login_data = {
+#         "email":request.form['email'],
+#         "password":request.form['password']
+#     }
+#     an_employee = employee.Employee.get_employee_by_email(login_data)
+#     print(" ---- AN EMPLOYEE----", an_employee)
+#     if not employee.Employee.validate_login(login_data, an_employee):
+#         return redirect('/')
+#     session['id'] = an_employee['id']
+#     session['first_name']=an_employee['first_name']
+#     session['last_name']=an_employee['last_name']
+#     session['permission']=an_employee['permission']
+#     return redirect('/dashboard')
+
 @app.route('/check_login', methods=["POST"])
 def validate_login_info():
     login_data = {
-        "email":request.form['email'],
-        "password":request.form['password']
+        "user_email":request.form['user_login'],
+        "pin":request.form['password']
     }
+    print ("****LOGIN DATA***** : ", login_data)
     an_employee = employee.Employee.get_employee_by_email(login_data)
     print(" ---- AN EMPLOYEE----", an_employee)
-    if not employee.Employee.validate_login(login_data, an_employee):
+    if not employee.Employee.validate_pin(login_data, an_employee):
         return redirect('/')
     session['id'] = an_employee['id']
     session['first_name']=an_employee['first_name']
     session['last_name']=an_employee['last_name']
     session['permission']=an_employee['permission']
     return redirect('/dashboard')
+
+
 
 @app.route('/check_registration', methods=["POST"])
 def validate_registration():

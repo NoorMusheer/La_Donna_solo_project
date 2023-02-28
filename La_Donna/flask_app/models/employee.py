@@ -49,7 +49,7 @@ class Employee:
 
     @classmethod
     def get_employee_by_email(cls, ee_data):
-        query = "SELECT * FROM employees WHERE email = %(email)s;"
+        query = "SELECT * FROM employees WHERE email = %(user_email)s;"
         result = connectToMySQL(cls.DB).query_db(query,ee_data)
         if result == ():
             return False
@@ -81,6 +81,17 @@ class Employee:
             is_valid = False
         elif not bcrypt.check_password_hash(an_employee['password'], login_data['password']):
             flash("*E-mail and password combination do not match our records. Please try again, or register <a href='/'>HERE</a>.", "login")
+            is_valid = False
+        return is_valid
+
+    @staticmethod
+    def validate_pin(login_data, an_employee):
+        is_valid = True
+        if not an_employee:
+            flash("E-mail and PIN combination does not match our records. Please try again.", "login")
+            is_valid = False
+        elif (an_employee['pin'] != login_data['pin']):
+            flash("*Sorry cuz, that's not the boss' code! Go get her to help you. ", "login")
             is_valid = False
         return is_valid
 
