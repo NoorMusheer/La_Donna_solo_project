@@ -58,3 +58,9 @@ def update_bride_info(id):
     bride.Bride.update_bride_by_id(data)
     return redirect('/brides')
 
+@app.route('/bride_notes')
+def bride_notes():
+    bride_list = bride.Bride.all_brides()
+    print("****BRIDE LIST*****", bride_list[1])
+    return render_template ('notes.html', bride_list = bride_list)
+
