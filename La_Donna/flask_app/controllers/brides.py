@@ -2,14 +2,14 @@ from flask_app import app
 from flask_app.models import bride, dress, employee, measurement, order
 from flask import render_template, redirect, request, session
 
-@app.route('/brides')
+@app.route('/clients')
 def index():
     all_brides = bride.Bride.all_brides()
-    return render_template("brides_list.html", all_brides = all_brides)
+    return render_template("client_list.html", all_brides = all_brides)
 
-@app.route('/new_bride')
+@app.route('/new_client')
 def new_bride():
-    return render_template("bride_add.html")
+    return render_template("client_add.html")
 
 @app.route('/bride_add_name_only', methods = ['POST'])
 def add_bride_to_db_name_only():
