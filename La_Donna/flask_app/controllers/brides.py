@@ -24,7 +24,7 @@ def add_bride_to_db_name_only():
 
 @app.route('/choose_next')
 def choose_next_step ():
-    return render_template("test_pages/choose.html")
+    return render_template("choose.html")
 
 @app.route('/bride_add', methods=['POST'])
 def add_bride_to_db():
