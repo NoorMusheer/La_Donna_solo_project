@@ -80,7 +80,8 @@ def login_page_after_register():
 @app.route('/dashboard')
 def user_dashborad():
     if session:
-        return render_template('dashboard_new_test.html')
+        active_clients = bride.Bride.all_brides()
+        return render_template('dashboard2.html', active_clients=active_clients) #Change to dashboard_new_test.html to change back
     else:
         return redirect('/')
 

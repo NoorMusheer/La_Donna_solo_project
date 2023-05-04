@@ -7,6 +7,11 @@ def index():
     all_brides = bride.Bride.all_brides()
     return render_template("client_list.html", all_brides = all_brides)
 
+@app.route('/all_clients')
+def active_clients():
+    active_clients = bride.Bride.all_brides()
+    return render_template("dashboard2.html", active_clients=active_clients)
+
 @app.route('/new_client')
 def new_bride():
     return render_template("client_add.html")

@@ -27,25 +27,36 @@
                 <div class="col-2"><h5><a href="/logout">Logout</a></h5></div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-6"><a href="/new_order"><button class="btn btn-outline w-100">New Order</button></a></div>
-            <div class="col-6"><a href="/orders"><button class="btn btn-outline w-100">List of Orders</button></a></div>
-        </div>
-        <div class="row">
-            <div class="col-6"><a href="/new_client"><button class="btn btn-outline w-100">New Client</button></a></div>
-            <div class="col-6"><a href="/clients"><button class="btn btn-outline w-100">List of Clients</button></a></div>
-        </div>
-        <div class="row">
-            <div class="col-6"><a href="/new_dress"><button class="btn btn-outline w-100">New Dress</button></a></div>
-            <div class="col-6"><a href="/dresses"><button class="btn btn-outline w-100">List of Dresses</button></a></div>
-        </div>
-        <div class="row">
-            <div class="col-6"><a href="/bride_notes"><button class="btn btn-outline w-100">Notes</button></a></div>
+            <form action="">
+
+                <div class="col">
+                    <label for="">Choose Client</label>
+                    <select name="" id="choose_client_by_name">
+                        {%for bride in active_clients%}
+                        <option value="client_1">{{bride.first_name}} {{bride.last_name}}</option>
+                        {%endfor%}
+                    </select>
+                </div>
+
+                <div class="col"><label for="">Action</label>
+                    <select name="" id="choose_action">
+                        <option value="get_signature">Get Signature</option>
+                        <option value="measurements">Take Measurements</option>
+                        <option value="notes">View Profile</option>
+                    </select>
+                </div>
+                
+                <div class="row">
+                    <input type="Submit" value="Go" class="btn btn-outline">
+                </div>
+        
+            </form>
+            
         </div>
 
-    </div>
-
+</div><!-- END MAIN CONTAINER -->
     <script src="../static/js/script.js"></script>
 </body>
-
 </html>
