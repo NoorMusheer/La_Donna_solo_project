@@ -37,12 +37,12 @@
                 <div class="row main-body-row o_form_col styl_appt_div_hdr" ><h5>CLIENT DETAILS</h5></div>
                 <div class="row order_form_row">
                     <div class="col">
-                        <label for="">Name:</label>
-                        <input type="text" placeholder="{{session.bride_first_name}} {{session.bride_last_name}}" class="o_form_input form-control">
+                        <label for="" >Name:</label>
+                        <input type="text" placeholder="{{current_active_client.first_name}} {{current_active_client.last_name}}" class="o_form_input form-control">
                     </div>
                     <div class="col">
                         <label for="">Phone:</label>
-                        <input type="phone" class="o_form_input form-control">
+                        <input type="phone" placeholder="{{current_active_client.phone}}" class="o_form_input form-control">
                     </div>
                 </div>
                 <div class="row order_form_row">

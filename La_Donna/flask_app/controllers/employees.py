@@ -21,6 +21,19 @@ def logout():
     session.clear()
     return redirect('/')
 
+@app.route('/task_page', methods=['POST'])
+def pullup_task_page():
+    client_id = int(request.form['clients'])
+    current_active_client = bride.Bride.get_bride_by_id(client_id)
+    print ('***** ACTIVE CLIENT **** ', current_active_client)
+    if request.form['actions'] == "get_signature":
+        return render_template ('/test_pages/style_appointment.html', current_active_client=current_active_client)
+    elif request.form['actions'] == "measurements":
+        return redirect ('/measurements_page')
+    else:
+        return redirect ('/dashboard')
+
+
 # @app.route('/check_login', methods=["POST"])
 # def validate_login_info():
 #     login_data = {

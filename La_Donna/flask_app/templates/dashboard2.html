@@ -29,19 +29,19 @@
         </div>
 
         <div class="row">
-            <form action="">
+            <form action="/task_page" method="POST">
 
                 <div class="col">
                     <label for="">Choose Client</label>
-                    <select name="" id="choose_client_by_name">
+                    <select name="clients" id="choose_client_by_name">
                         {%for bride in active_clients%}
-                        <option value="client_1">{{bride.first_name}} {{bride.last_name}}</option>
+                        <option value="{{bride.id}}">{{bride.first_name}} {{bride.last_name}}</option>
                         {%endfor%}
                     </select>
                 </div>
 
                 <div class="col"><label for="">Action</label>
-                    <select name="" id="choose_action">
+                    <select name="actions" id="choose_action">
                         <option value="get_signature">Get Signature</option>
                         <option value="measurements">Take Measurements</option>
                         <option value="notes">View Profile</option>
