@@ -102,3 +102,7 @@ a{
     color: white;
     border-radius: 5px;
 }
+
+.msmnts{
+    width:fit-content !important;
+}

@@ -69,3 +69,7 @@ def bride_notes():
     print("****BRIDE LIST*****", bride_list[1])
     return render_template ('notes.html', bride_list = bride_list)
 
+@app.route('/measurements2')
+def take_measurements():
+    return render_template("/measurements2.html")
+
